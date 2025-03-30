@@ -1,0 +1,162 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: blanchedalmond;
+}
+
+.container {
+    background: rgb(65, 65, 231);
+    color: aliceblue;
+    height: 80vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px blue;
+    padding: 20px; /* Add some padding for small screens */
+}
+
+.header {
+    background-color: red;
+    margin-top: 40px;
+    background-image: url('https://png.pngtree.com/background/20210715/original/pngtree-abstract-technology-blue-background-picture-image_1254759.jpg');
+    height: 30%;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.header > h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    background: url('https://th.bing.com/th/id/OIP.f6Et8CDwVX2XrCfNUMpQiAHaHa?rs=1&pid=ImgDetMain') center/cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header > h5 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    background: url('https://wallpapercave.com/wp/wp8036363.jpg') center/cover;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.addtask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    flex-direction: row;
+    width: 100%; /* Make sure the add task area takes full width */
+    justify-content: space-between;
+}
+
+.addtask > input {
+    height: 30px;
+    width: 70%; /* Adjust width for smaller screens */
+    background-color: #000;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#btn, #btn2 {
+    height: 30px;
+    width: 25%; /* Adjust button size for small screens */
+    background-color: green;
+    color: #000;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.my-class {
+    height: 30px;
+    width: 90%; /* Adjust task width */
+    background-color: #000;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#btn2 {
+    background-color: red;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90vw; /* Make the container wider on tablets */
+    }
+
+    .header > h1 {
+        font-size: 40px; /* Smaller font size for h1 */
+    }
+
+    .header > h5 {
+        font-size: 20px; /* Smaller font size for h5 */
+    }
+
+    .addtask > input {
+        width: 60%; /* Adjust input field width */
+    }
+
+    #btn, #btn2 {
+        width: 30%; /* Increase button width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95vw; /* Make the container almost full width on mobile */
+    }
+
+    .header > h1 {
+        font-size: 30px; /* Further reduce font size for h1 */
+    }
+
+    .header > h5 {
+        font-size: 18px; /* Further reduce font size for h5 */
+    }
+
+    .addtask {
+        flex-direction: column; /* Stack the input and buttons vertically */
+        row-gap: 10px;
+    }
+
+    .addtask > input {
+        width: 90%; /* Make the input take more space */
+    }
+
+    #btn, #btn2 {
+        width: 80%; /* Make buttons larger for mobile */
+    }
+
+    .my-class {
+        width: 100%; /* Task div takes up full width on mobile */
+    }
+}
